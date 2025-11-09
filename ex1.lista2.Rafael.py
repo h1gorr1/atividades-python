@@ -11,26 +11,38 @@
 #entrada = [2, 3, \"4\", 5, \"abc\", 7.0, 11, \"13\", None, 17] 
 #saida_esperada = [2, 3, 5, 7, 11, 13, 17] 
 lista = []
-primos = []
-contador = 0
+
+
 n = int
 while n != 0:
     n = input("Digite Valores,Coloque 0 Para Finalizar!: ")
-    lista.append(n)
-    print(lista)
     try:
         n = int(n)
+        lista.append(n)
+        print(lista)
+    
     except:
+        print(f" Valor Inserido Inválido({n}) Logo, Será Ignorado! ")
         print(lista)
         continue
+
+def primos(lista):
+    lprimos = []
+    for i in (lista):
+        contador = 0
     
-for i in (lista):
-    for j in range(1,n + 1):
-        if i % j == 0:
-            contador = contador + 1
-            if contador == 2:
-                primos.append(i)
-print(primos)
+        for j in range(1,i + 1):
+            if i % j == 0: 
+                contador = contador + 1
+    
+            else:
+                continue
+        if contador == 2:
+            lprimos.append(i)
+    return(lprimos)
+            
+    
+print(primos(lista))
 
 
         
@@ -38,8 +50,6 @@ print(primos)
 
 
 
-# for i in range
-# def primos(lista):
-#     for i in lista(i,)
+
 
 
